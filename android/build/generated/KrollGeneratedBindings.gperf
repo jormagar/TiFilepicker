@@ -1,0 +1,18 @@
+%define lookup-function-name lookupGeneratedInit
+%define class-name FilepickerBindings
+%{
+
+#include <string.h>
+#include <v8.h>
+#include <KrollBindings.h>
+
+#include "ti.filepicker.ExampleProxy.h"
+#include "ti.filepicker.FilepickerModule.h"
+
+
+%}
+struct titanium::bindings::BindEntry;
+%%
+ti.filepicker.ExampleProxy, ::ti::filepicker::filepicker::ExampleProxy::bindProxy, ::ti::filepicker::filepicker::ExampleProxy::dispose
+ti.filepicker.FilepickerModule, ::ti::filepicker::FilepickerModule::bindProxy, ::ti::filepicker::FilepickerModule::dispose
+%%
